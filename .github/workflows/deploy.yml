@@ -3,7 +3,9 @@ name: Build and Push OpenClaw to DockerHub
 on:
   push:
     branches: ["main"]
-
+    paths:
+      - ".github/workflows/deploy.yml"
+      - "Dockerfile"
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
